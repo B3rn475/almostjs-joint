@@ -1,5 +1,5 @@
 # almostjs-joint
-ALMOsT is an AgiLe MOdel Transformation framework for JavaScript
+__ALMOsT__ is an **A**gi**L**e **MO**del **T**ransformation framework for JavaScript
 
 [![NPM Version][npm-image]][npm-url]
 [![MIT licensed][license-image]][license-url]
