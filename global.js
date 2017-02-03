@@ -4,7 +4,11 @@
 /*jslint node: true*/
 "use strict";
 
-var mtjoint = require('./'),
-    window = require('window');
+var window = require('window');
 
-window.mtjoint = mtjoint;
+if (!window.almost) {
+    window.almost = {
+        plugins: {}
+    };
+}
+window.almost.plugins.joint = require('./');
