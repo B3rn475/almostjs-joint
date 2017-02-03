@@ -1,0 +1,171 @@
+// Copyright (c) 2016, the ALMOsT project authors. Please see the
+// AUTHORS file for details. All rights reserved. Use of this source code is
+// governed by a MIT-style license that can be found in the LICENSE file.
+
+%almost-joint-marker {
+    pointer-events: auto;
+    display: inline-block;
+}
+
+%almost-joint-manipulation-marker {
+    @extend %almost-joint-marker;
+    display: block;
+    position: absolute;
+}
+
+%almost-joint-marker-resize {
+    @extend %almost-joint-manipulation-marker;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: blue;
+}
+
+%almost-joint-marker-top {
+    top: -5px;
+}
+
+%almost-joint-marker-bottom {
+    bottom: -5px;
+}
+
+%almost-joint-marker-middle {
+    top: 50%;
+    margin-top: -5px;
+}
+
+%almost-joint-marker-left {
+    left: -5px;
+}
+
+%almost-joint-marker-right {
+    right: -5px;
+}
+
+%almost-joint-marker-center {
+    left: 50%;
+    margin-left: -5px;
+}
+
+%almost-joint-map-size {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 250px;
+    height: 145px;
+    padding: 5px;
+    opacity: 0.8;
+    pointer-events:none;
+    div {
+        padding: 5px;
+    }
+}
+
+.almost-joint-paper.joint-paper {
+
+    .almost-joint-map {
+        @extend %almost-joint-map-size;
+        background: lightgrey;
+    }
+
+    .almost-joint-map-viewport {
+        @extend %almost-joint-map-size;
+    }
+
+    .almost-joint-manipulator {
+        position: absolute;
+        border-color: lightgray;
+        border-width: 1px;
+        border-style: dashed;
+        pointer-events:none;
+        .almost-joint-marker-tab {
+            position: absolute;
+            text-align: center;
+            top: -25px;
+            right: -100px;
+            left: -100px;
+            height: 25px;
+            pointer-events: none;
+
+            svg {
+                @extend %almost-joint-marker;
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+
+    .almost-joint-manipulator.almost-joint-resizable {
+        .almost-joint-marker-nw {
+            @extend %almost-joint-marker-resize;
+            @extend %almost-joint-marker-top;
+            @extend %almost-joint-marker-left;
+            cursor: nw-resize;
+        }
+        .almost-joint-marker-ne {
+            @extend %almost-joint-marker-resize;
+            @extend %almost-joint-marker-top;
+            @extend %almost-joint-marker-right;
+            cursor: ne-resize;
+        }
+        .almost-joint-marker-sw {
+            @extend %almost-joint-marker-resize;
+            @extend %almost-joint-marker-bottom;
+            @extend %almost-joint-marker-left;
+            cursor: sw-resize;
+        }
+        .almost-joint-marker-se {
+            @extend %almost-joint-marker-resize;
+            @extend %almost-joint-marker-bottom;
+            @extend %almost-joint-marker-right;
+            cursor: se-resize;
+        }
+        .almost-joint-marker-n {
+            @extend %almost-joint-marker-resize;
+            @extend %almost-joint-marker-top;
+            @extend %almost-joint-marker-center;
+            cursor: n-resize;
+        }
+        .almost-joint-marker-e {
+            @extend %almost-joint-marker-resize;
+            @extend %almost-joint-marker-right;
+            @extend %almost-joint-marker-middle;
+            cursor: e-resize;
+        }
+        .almost-joint-marker-w {
+            @extend %almost-joint-marker-resize;
+            @extend %almost-joint-marker-left;
+            @extend %almost-joint-marker-middle;
+            cursor: w-resize;
+        }
+        .almost-joint-marker-s {
+            @extend %almost-joint-marker-resize;
+            @extend %almost-joint-marker-bottom;
+            @extend %almost-joint-marker-center;
+            cursor: s-resize;
+        }
+    }
+
+    .almost-joint-manipulator.almost-joint-rotatable {
+        .almost-joint-marker-rotate {
+            @extend %almost-joint-manipulation-marker;
+            display: block;
+            width: 10px;
+            height: 10px;
+            background: lightgreen;
+            margin-top: -5px;
+            margin-left: -5px;
+            border-radius: 5px;
+        }
+    }
+
+    .almost-joint-manipulator.almost-joint-manipulating * { pointer-events: none; }
+    .almost-joint-manipulator.almost-joint-resizing-nw * { cursor: nw-resize; }
+    .almost-joint-manipulator.almost-joint-resizing-ne * { cursor: ne-resize; }
+    .almost-joint-manipulator.almost-joint-resizing-sw * { cursor: sw-resize; }
+    .almost-joint-manipulator.almost-joint-resizing-se * { cursor: se-resize; }
+    .almost-joint-manipulator.almost-joint-resizing-n * { cursor: n-resize; }
+    .almost-joint-manipulator.almost-joint-resizing-e * { cursor: e-resize; }
+    .almost-joint-manipulator.almost-joint-resizing-w * { cursor: w-resize; }
+    .almost-joint-manipulator.almost-joint-resizing-s * { cursor: s-resize; }
+}
