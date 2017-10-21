@@ -1,22 +1,22 @@
 {
   "name": "almost-joint",
-  "version": "v1.0.0-alpha.7",
+  "version": "v1.0.0-alpha.8",
   "description": "",
   "main": "index.js",
   "author": "Carlo Bernaschina (GitHub: B3rn475)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/B3rn475/almost-joint.git"
+    "url": "git+https://github.com/B3rn475/almostjs-joint.git"
   },
   "license": "MIT",
   "licenses": {
     "type": "MIT",
-    "url": "http://github.com/B3rn475/almost-joint/raw/master/LICENSE"
+    "url": "http://github.com/B3rn475/almostjs-joint/raw/master/LICENSE"
   },
   "bugs": {
-    "url": "https://github.com/B3rn475/almost-joint/issues"
+    "url": "https://github.com/B3rn475/almostjs-joint/issues"
   },
-  "homepage": "https://github.com/B3rn475/almost-joint#readme",
+  "homepage": "https://github.com/B3rn475/almostjs-joint#readme",
   "devDependencies": {
     "browserify": "^13.0.0",
     "exposify": "^0.5.0",
