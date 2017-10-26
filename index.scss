@@ -72,12 +72,16 @@
         @extend %almost-joint-map-size;
     }
 
+    .almost-joint-no-grip {
+        cursor: default;
+    }
+
     .almost-joint-manipulator {
         position: absolute;
         border-color: lightgray;
         border-width: 1px;
         border-style: dashed;
-        pointer-events:none;
+        pointer-events: none;
         .almost-joint-marker-tab {
             position: absolute;
             text-align: center;
