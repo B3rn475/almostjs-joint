@@ -5,19 +5,13 @@
 "use strict";
 
 var Board = require('./lib/board').Board,
-    ElementsMenu = require('./lib/elementsmenu').ElementsMenu,
-    ModalEdit = require('./lib/modaledit').ModalEdit,
     utils = require('./lib/utils');
 
 // Constructors
 exports.Board = Board;
-exports.ElementsMenu = ElementsMenu;
-exports.ModalEdit = ModalEdit;
 
 // Maker Functions
 exports.createBoard = Board;
-exports.createElementsMenu = ElementsMenu;
-exports.createModalEdit = ModalEdit;
 
 // utils
 exports.utils = utils;
