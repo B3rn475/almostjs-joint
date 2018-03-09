@@ -173,3 +173,16 @@
     .almost-joint-manipulator.almost-joint-resizing-w * { cursor: w-resize; }
     .almost-joint-manipulator.almost-joint-resizing-s * { cursor: s-resize; }
 }
+
+.almost-join-item-dragger {
+    width: 100%;
+}
+
+.almost-join-item-dragger-overlay {
+    position: absolute;
+    left:0;
+    right:0;
+    top: 0;
+    bottom: 0;
+    z-index: 100000;
+}
