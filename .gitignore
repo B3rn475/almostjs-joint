@@ -41,3 +41,6 @@ dist
 
 # Dependency
 package-lock.json
+
+# Package Lock
+package-lock.json
