@@ -10,7 +10,7 @@ __ALMOsT_Joint__ is built on top of __JointJs__ concepts like:
  - __Graph__: the structure of the diagram [see][joint-graph-url]
  - __Cell__: a component of the diagram [see][joint-cell-url]
  - __Element__: a __Cell__ with position, size and a graphical representation  [see][joint-element-url]
- - __Link__: a __Cell__ with a line-ish graphical representation (line, arrow, ...) connecting two cells [see][joint-link-url]
+ - __Link__: a __Cell__ with a line-ish graphical representation (line, arrow, ...) connecting two elements [see][joint-link-url]
 
 It just adds the concept of __Board__, an abstraction over the [Paper][joint-paper-url] concept in __JoinJs__ which provides you a set of functionalities out of the box.
 
@@ -29,7 +29,7 @@ The `createBoard` constructor function has the following options:
 - `model: [joint.dia.Graph]` the __Graph__ which contains the displayed diagram.
 - _optional_ `isValidParent: [function (elementView, parentElementView)]` a function which validates the parent/child relationship between elements, a negative response will reject the previous operation by the user.
   The __parent__ can be `undefined` if the element is in a free area of the __Board__, at least one element must have no parent.
-- _optional_ `defaultLink: [function (elementView, magnet)]` this function serves the same function as the [JointJs counterpart][joint-defaultlink-url].
+- _optional_ `defaultLink: [function (elementView, magnet)]` this function serves the same functionality as the [JointJs counterpart][joint-defaultlink-url].
 
 [npm-image]: https://img.shields.io/npm/v/almost-joint.svg
 [npm-url]: https://npmjs.org/package/almost-joint
