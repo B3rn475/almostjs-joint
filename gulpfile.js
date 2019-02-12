@@ -21,7 +21,6 @@ var expose = {
     'jquery': '$',
     'lodash': '_',
     'backbone': 'Backbone',
-    'knockout': 'ko',
     'joint': 'joint',
     'window': 'window',
     'navigator': 'navigator',
