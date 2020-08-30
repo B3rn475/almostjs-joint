@@ -92,8 +92,6 @@ gulp.task('almost-joint.min.css', function () {
         .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('build', ['almost-joint.js', 'almost-joint.min.js', 'almost-joint.css', 'almost-joint.min.css']);
+gulp.task('build', gulp.parallel('almost-joint.js', 'almost-joint.min.js', 'almost-joint.css', 'almost-joint.min.css'));
 
-gulp.task('default', ['clean'], function () {
-    return gulp.start('build');
-});
+gulp.task('default', gulp.series('clean', 'build'));
