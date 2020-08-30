@@ -11,7 +11,7 @@ var gulp = require('gulp'),
     source = require('vinyl-source-stream'),
     buffer = require('vinyl-buffer'),
     extractor = require('gulp-extract-sourcemap'),
-    minifyjs = require('gulp-uglify');
+    minifyjs = require('gulp-uglify-es').default;;
 
 gulp.task('clean', function () {
     return gulp.src('./dist/*', {read: false, dot: true}).pipe(rimraf({ force: true }));
